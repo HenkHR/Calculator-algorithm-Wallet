@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Portemonnee Invoer</title>
+    <link rel="stylesheet" href="css/portemonnee.css">
+    <script src="js/portemonnee.js" defer></script>
+</head>
+<body>
+<div class="modal-overlay" id="modalOverlay">
+    <!-- Modal content -->
+    <div class="modal">
+        <button class="close-btn" id="closeBtn">X</button>
+        <div class="modal-content">
+            <h2>Inhoud portemonnee</h2>
+            <ul id="portemonneeLijst"></ul>
+        </div>
+    </div>
+</div>
+<header>
+    <nav>
+        <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+            <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+        </svg>Terug</a>
+        <h3 class="open-modal-btn">Aantal: €<span id="totaalSaldo">0.00</span><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
+        </svg></h3>
+    </nav>
+    <h1>
+        Voer hier in wat je bij je hebt
+    </h1>
+</header>
+<form id="portemonneeForm">
+    <div class="form-container">
+        <div class="billRow">
+            <div class="form-item">
+                <img src="img/50.png" height="150" width="255">
+                <label for="biljet50">Aantal 50 briefjes:</label>
+                <div class="container">
+                    <button type="button" class="minus multi">-</button>
+                    <p id="biljet50-indicator" class="bold"></p>
+                    <input type="number" id="biljet50" data-waarde="50" value="0" hidden>
+                    <button type="button" class="plus multi">+</button>
+                </div>
+            </div>
+            <div class="form-item">
+                <img src="img/20.png" height="150" width="255">
+                <label for="biljet20">Aantal 20 briefjes:</label>
+                <div class="container">
+                    <button type="button" class="minus multi">-</button>
+                    <p id="biljet20-indicator" class="bold"></p>
+                    <input type="number" id="biljet20" data-waarde="20" value="0" hidden>
+                    <button type="button" class="plus multi">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="billRow">
+            <div class="form-item">
+                <img src="img/10.png" height="150" width="255">
+                <label for="biljet10">Aantal 10 briefjes:</label>
+                <div class="container">
+                    <button type="button" class="minus multi">-</button>
+                    <p id="biljet10-indicator" class="bold"></p>
+                    <input type="number" id="biljet10" data-waarde="10" value="0" hidden>
+                    <button type="button" class="plus multi">+</button>
+                </div>
+            </div>
+            <div class="form-item">
+                <img src="img/5.png" height="150" width="255">
+                <label for="biljet5">Aantal 5 briefjes:</label>
+                <div class="container">
+                    <button type="button" class="minus multi">-</button>
+                    <p id="biljet5-indicator" class="bold"></p>
+                    <input type="number" id="biljet5" data-waarde="5" value="0" hidden>
+                    <button type="button" class="plus multi">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="coinRow">
+            <div class="form-item">
+                <img src="img/2.png" height="130" width="130">
+                <label for="munt2">Aantal 2 euro's:</label>
+                <div class="container">
+                    <button type="button" class="minus multi">-</button>
+                    <p id="munt2-indicator" class="bold"></p>
+                    <input type="number" id="munt2" data-waarde="2" value="0" hidden>
+                    <button type="button" class="plus multi">+</button>
+                </div>
+            </div>
+            <div class="form-item">
+                <img src="img/1.png" height="130" width="130">
+                <label for="munt1">Aantal 1 euro's:</label>
+                <div class="container">
+                    <button type="button" class="minus multi">-</button>
+                    <input type="number" id="munt1" data-waarde="1" value="0" hidden>
+                    <p id="munt1-indicator" class="bold"></p>
+                    <button type="button" class="plus multi">+</button>
+                </div>
+            </div>
+            <div class="form-item">
+                <img src="img/0.50.png" height="130" width="130">
+                <label for="munt0.50">Aantal 50 centjes:</label>
+                <div class="container">
+                    <button type="button" class="minus multi">-</button>
+                    <p id="munt0.50-indicator" class="bold"></p>
+                    <input type="number" id="munt0.50" data-waarde="0.50" value="0" hidden>
+                    <button type="button" class="plus multi">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="coinRow">
+            <div class="form-item">
+                <img src="img/0.20.png" height="130" width="130">
+                <label for="munt0.20">Aantal 20 centjes:</label>
+                <div class="container">
+                    <button type="button" class="minus multi">-</button>
+                    <p id="munt0.20-indicator" class="bold"></p>
+                    <input type="number" id="munt0.20" data-waarde="0.20" value="0" hidden>
+                    <button type="button" class="plus multi">+</button>
+                </div>
+            </div>
+            <div class="form-item">
+                <img src="img/0.10.png" height="130" width="130">
+                <label for="munt0.10">Aantal 10 centjes:</label>
+                <div class="container">
+                    <button type="button" class="minus multi">-</button>
+                    <p id="munt0.10-indicator" class="bold"></p>
+                    <input type="number" id="munt0.10" data-waarde="0.10" value="0" hidden>
+                    <button type="button" class="plus multi">+</button>
+                </div>
+            </div>
+            <div class="form-item">
+                <img src="img/0.05.png" height="130" width="130">
+                <label for="munt0.05">Aantal 5 centjes:</label>
+                <div class="container">
+                    <button type="button" class="minus multi">-</button>
+                    <p id="munt0.05-indicator" class="bold"></p>
+                    <input type="number" id="munt0.05" data-waarde="0.05" value="0" hidden>
+                    <button type="button" class="plus multi">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-zooi">
+        <button type="button" id="resetBtn" class="submit"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-trash3" width="40" height="40" viewBox="0 0 16 16">
+            <path
+                    d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
+        </svg>
+            Portemonnee legen</button>
+    </div>
+</form>
+
+</body>
+</html>

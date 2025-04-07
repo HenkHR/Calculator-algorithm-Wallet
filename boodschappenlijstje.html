@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/boodschappenlijstje.css">
+    <title>Boodschappenlijstje</title>
+    <script defer type="text/javascript" src=js/boodschappenlijstje.js></script>
+    <script defer type="text/javascript" src=js/screenreader.js></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a aria-label="Terug naar Rekenmachine" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="40"
+                    height="40" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                    <path fill-rule="evenodd"
+                        d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                </svg>Terug</a>
+        </nav>
+        <h1>
+            Boodschappenlijstje
+        </h1>
+    </header>
+    <main>
+        <form id="boodschappen-form">
+            <div class="form-item">
+                <label aria-hidden="true" for="boodschap">Ik wil iets toevoegen.</label>
+                <input aria-label="Schrijf hier wat je wilt toevoegen" type="text" id="boodschap" name="boodschap"
+                    placeholder="Schrijf hier wat je wilt toevoegen.">
+                <input aria-label="Voeg boodschappen toe" type="submit" class="button" id="input" value="Voeg toe">
+            </div>
+        </form>
+        <section aria-label="Je boodschappenlijst" class="boodschappenlijst">
+            <ul aria-hidden="true" id="boodschappenlijst">
+                <!-- List items will be added here -->
+            </ul>
+        </section>
+        <div id="screen-reader-button-container">
+            <p aria-label="Boodschappenlijst leegmaken" id="clear-button" class="button">Lijst leegmaken</p>
+            <p aria-label="Ingebouwde screen reader knop" id="screen-reader-button" class="button">Lees scherm voor</p>
+        </div>
+    </main>
+</body>
+
+</html>

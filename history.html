@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geschiedenis</title>
+    <link rel="stylesheet" href="css/history.css">
+    <script src="js/history.js"></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+            <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+        </svg>Terug</a>
+    </nav>
+    <h1>
+        Betaalgeschiedenis
+    </h1>
+</header>
+
+<main>
+    <input type="text" id="searchInput" placeholder="zoek op product, prijs of datum" onkeyup="filterProducts()">
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Prijs</th>
+                <th>Datum</th>
+            </tr>
+        </thead>
+    </table>
+    <div class="tableScroll">
+        <table cellspacing="0">
+            <tbody id="productTableBody"></tbody>
+        </table>
+    </div>
+</main>
+
+</body>
+</html>

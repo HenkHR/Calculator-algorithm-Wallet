@@ -1,0 +1,248 @@
+:root {
+    --error: red;
+    --nav-button: #7070ff;
+}
+
+*{
+    padding:0;
+    margin:0;
+    font-family: "Segoe UI";
+}
+/* terug knop */
+nav{
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+h3{
+    font-size: 40px;
+    display: inline-flex;
+    align-items: center;
+}
+h3 svg{
+    color: dodgerblue;
+    padding-left: 5px;
+}
+a {
+    display: inline-flex;
+    align-items: center;
+    height: 6vh;
+    width: 30vw;
+    justify-content: center;
+    font-size: 40px;
+}
+nav a{
+    color: white;
+    background-color: dodgerblue;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+/* eind terug knop */
+
+h1 {
+    text-align: center;
+    font-size: 55px;
+    padding: 20px 60px 30px 80px ;
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    padding: 20px;
+    justify-content: center;
+    max-width: 100vw;
+    align-items: center;
+}
+
+.billRow{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.billRow .form-item{
+    width: 40vw;
+    text-align: center;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #e8e8e8;
+    height: 14vh;
+}
+.coinRow{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.coinRow .form-item img{
+    border-radius: 50%;
+}
+
+.coinRow .form-item{
+    text-align: center;
+    width: 25vw;
+}
+
+.multi{
+    color: white;
+    background-color: #7070ff;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+.container p{
+    padding: 0 20px;
+    font-size: 30px;
+}
+label{
+    font-size: 30px;
+}
+.container button {
+    height: 90px;
+    width: 80px;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.container p {
+    min-width: 30px;
+    text-align: center;
+}
+
+
+.submit {
+    margin-top: 35px;
+    height: 6vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: indianred;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 40px;
+}
+
+.submit a {
+    text-decoration: none;
+    color: white;
+}
+.submit svg{
+    width: 24px;
+    height: 24px;
+}
+.flex-zooi {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Modal overlay styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1000;
+}
+
+/* Modal content styles */
+.modal {
+    position: fixed;
+    font-size: 50px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    height: 75vh;
+    width: 70vw;
+}
+
+.modal ul{
+    padding-left: 60px;
+    padding-top: 50px;
+}
+
+/* Close button styles */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff0000;
+    /* Red background */
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+    /* White X */
+    padding: 30px 35px;
+    margin: 20px;
+    line-height: 1;
+    border-radius: 30px;
+    /* Rounded corners */
+    transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+/* Modal content */
+.modal-content {
+    margin-top: 20px;
+}
+
+.continue{
+    background-color: dodgerblue;
+}
+
+@media (min-width: 500px) {
+    .form-item{
+        height: 300px;
+    }
+}
